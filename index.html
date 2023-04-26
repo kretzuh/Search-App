@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SearchApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 style="text-align: center">Welcome to SearchApp - The App That Lets You Search</h1>
+
+<div id = "menu">
+    <br><br><br><br>
+        <span onclick="element_alege_operator()" class="span" id="alege_operator">Alege Operator</span>
+        <br><br>
+        <span onclick="element_input_tablou()" class="span" id="input_tablou">Input Tablou</span>
+        <br><br>
+        <span onclick="element_referinta()" class="span" id="stabileste_referinta">Stabileste Referinta</span>
+</div>
+<br><br>
+<p id="rezultat"></p>
+<br><br>
+<div id="butoane">
+<button onclick="calculeaza_expresie()" id="cauta_referinta">Cauta Referinta</button>
+<button onclick="reseteaza_valori()" id="cancel">Cancel</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
