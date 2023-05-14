@@ -16,7 +16,7 @@ operatori_comparatie.forEach(operator => {
 
 //varianta cu for loop
 
-/*for (let i=0; i<operatori_egalitate.length; i++) {
+/*for (let i=0; i<operatori_comparatie.length; i++) {
     let option = document.createElement('option')
     option.innerText = operatori_egalitate[i]
     select.appendChild(option)
@@ -40,12 +40,12 @@ save_current_number.onclick = () => {
     }
 }
 
-/*select.addEventListener('onchange', function() {
-    elemente.operator_comparatie = option.value
-})*/
-
-select.onchange = () => {
+/*select.onchange = () => {
     elemente.operator_comparatie = event.target.value
+}*/
+
+select.onchange = (value) => {
+    elemente.operator_comparatie = select.value
 }
 
 referinta.onchange = () => {
