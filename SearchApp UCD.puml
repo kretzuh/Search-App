@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+
+user --> (afiseaza o lista cu operatorii de comparatie JS)
+user --> (selecteaza un operator care va fi memorat de catre aplicatie)
+user --> (afiseaza un element de input pentru a introduce un set de numere)
+user --> (introduce un set de 10 numere care vor fi memorate de catre aplicatie)
+user --> (afiseza un element de input pentru a introduce un numar - valoare de referinta)
+usecase uc1 as "in setul de numere introdus se vor cauta numerele
+care corespund conditiei stabilite de catre
+utilizator prin selectia operatorului de comparatie
+si a numarului de referinta"
+user --> uc1
+uc1 --> (se afiseaza elementele gasite care corespund conditiei)
+uc1 --> (se afiseaza un mesaj de eroare in cazul in care nu exista elemente gasite)
+
+@enduml

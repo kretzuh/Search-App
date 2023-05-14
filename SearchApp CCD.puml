@@ -1,0 +1,96 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class landing_page {
+elemente_gasite
+afiseaza_operator_selectat()
+afiseaza_set_de_numere_introdus()
+afiseaza_valoare_referinta()
+}
+
+class meniu
+
+class optiune {
+
+}
+
+class buton_cautaReferinta {
+text
+}
+
+class buton_reset {
+text
+reset_options_to_default_values()
+}
+
+'class text
+
+
+
+class element_lista_operator_de_comparatie_JS
+
+class element_input_set_de_numere
+
+class element_input_valoare_de_referinta
+
+class optiunea_alegeOperator {
+element_lista_operator_de_comparatie_JS
+operator_selectat
+selecteaza_operator()
+
+}
+
+
+'class lista
+
+'class operator_de_comparatie_JS
+
+'class utilizator
+
+'class select
+
+'class operator
+
+class optiunea_inputTablou {
+element_input_set_de_numere
+set_de_numere_introdus
+}
+
+'class set_de_numere
+
+class optiunea_stabilesteReferinta {
+element_input_valoare_de_referinta
+valoare_de_referinta
+}
+
+'class element_de_input
+
+'class valoare_de_referinta
+
+'class functionalitate_cautare
+
+'class set_de_numere
+
+'class numere
+
+'class conditie
+
+'class selectie
+
+'class elemente_gasite
+
+class mesaj_de_eroare
+
+
+landing_page "1"*--"1" meniu
+meniu "1"*--"3" optiune
+landing_page "1" *-- "1" buton_cautaReferinta
+landing_page "1" *-- "1" buton_reset
+optiune "1"*--"1" optiunea_alegeOperator
+optiune "1"*--"1" optiunea_inputTablou
+optiune "1"*-- "1" optiunea_stabilesteReferinta
+landing_page o-- mesaj_de_eroare
+optiunea_alegeOperator "1" o--"0..1" element_lista_operator_de_comparatie_JS
+optiunea_inputTablou "1" o--"0..1" element_input_set_de_numere
+optiunea_stabilesteReferinta "1" o--"0..1" element_input_valoare_de_referinta
+@enduml
